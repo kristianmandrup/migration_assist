@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = %q{2010-08-18}
+  s.date = %q{2010-08-19}
   s.description = %q{Assists in handling migrations, including generating migration files from a Thor Generator}
   s.email = %q{kmandrup@gmail.com}
   s.extra_rdoc_files = [
@@ -27,9 +27,17 @@ Gem::Specification.new do |s|
      "lib/generators/migration/migration_generator.rb",
      "lib/generators/migration/templates/create_users.erb",
      "lib/migration_assist.rb",
-     "lib/migration_helper/class_methods.rb",
-     "lib/migration_helper/implementation.rb",
-     "spec/migration_assist/migration_generator_spec.rb",
+     "lib/migration_assist/class_methods.rb",
+     "lib/migration_assist/implementation.rb",
+     "migration_assist.gemspec",
+     "spec/generators/migration_generator_spec.rb",
+     "spec/load_spec.rb",
+     "spec/migration_assist/class_methods_spec.rb",
+     "spec/migration_assist/fixtures/001_migration_a.rb",
+     "spec/migration_assist/fixtures/002_migration_b.rb",
+     "spec/migration_assist/fixtures/003_migration_a.rb",
+     "spec/migration_assist/fixtures/004_migration_c.rb",
+     "spec/migration_assist/implementation_spec.rb",
      "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/kristianmandrup/migration_assist}
@@ -38,7 +46,14 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Assists in handling migrations}
   s.test_files = [
-    "spec/migration_assist/migration_generator_spec.rb",
+    "spec/generators/migration_generator_spec.rb",
+     "spec/load_spec.rb",
+     "spec/migration_assist/class_methods_spec.rb",
+     "spec/migration_assist/fixtures/001_migration_a.rb",
+     "spec/migration_assist/fixtures/002_migration_b.rb",
+     "spec/migration_assist/fixtures/003_migration_a.rb",
+     "spec/migration_assist/fixtures/004_migration_c.rb",
+     "spec/migration_assist/implementation_spec.rb",
      "spec/spec_helper.rb"
   ]
 

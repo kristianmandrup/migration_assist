@@ -1,8 +1,9 @@
 require 'rails/generators'
 require 'rails/generators/migration'
+require 'rails3_assist'
 
 module Rails::Assist::Generators
-  module MigrationHelper
+  module Migration
     include Rails::Generators::Migration
     include Rails::Assist::Migration
       

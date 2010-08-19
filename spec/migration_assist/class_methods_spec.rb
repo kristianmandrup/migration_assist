@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'rails'
 
 class TestGenerator
-  include Rails::Assist::Generators::Migration
+  include Rails::Migration::Assist
 end
 
 describe 'Migration Assist' do

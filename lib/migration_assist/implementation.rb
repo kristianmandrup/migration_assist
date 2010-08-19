@@ -1,10 +1,11 @@
 require 'rails/generators'
 require 'rails/generators/migration'
-require 'rails3_assist'
+require 'migration_assist/helper/file_name'
 
 module Rails::Migration::Assist
   include Rails::Generators::Migration
-  include Rails::Assist::Migration
+  # include Rails::Assist::Migration
+  include FileNameHelper
     
   def reverse_migration_name name
     name.gsub(/^add_/, 'remove_').gsub(/^create_/, 'drop_')
@@ -34,5 +35,5 @@ module Rails::Migration::Assist
   
   def migration name, template_name=nil
     migration_template "#{template_name || name}.erb", migration_file_name(name)
-  end
+  end  
 end

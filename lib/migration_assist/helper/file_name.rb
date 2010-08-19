@@ -41,7 +41,7 @@ module Rails::Migration::Assist
 
     def root_dir                                                                                    
       dir = Migration::Assist.rails_root_dir
-      raise "You must set the Rails app root dir: Migration::Assist.rails_root_dir = '/my/root/dir'" if !dir
+      raise "You must set the Rails app root dir: Rails::Migration::Assist.rails_root_dir = '/my/root/dir'" if !dir
       dir
     end    
         

@@ -1,10 +1,39 @@
 # Migration Assistant
 
 Assists in handling migrations, including generating migration files from a Thor Generator
-
 The *Migration Assistant* includes specialized functionality for operating with *Active Record* migrations.
 
-#### Class methods:
+## Install
+
+<code>gem install migration_assist</code>
+
+## Usage
+
+First you have to tell the gem where your Rails root directory is located so it can calculate the migrations dir from that for its operation.
+
+Example:
+<pre>
+  Rails::Migration::Assist.rails_root_dir = Rails.root
+</pre>  
+
+A common use case for using this gem, is when you are creating code Generators that create Active Record migrations.
+In this case you would add this Helper to your generator sth. like this
+
+<pre>
+require 'migration_assist'
+require 'rails3_assist'
+
+class MigrationGenerator < Rails::Generators::NamedBase 
+  include Rails::Migration::Assist  
+  include Rails::Assist::Migration # from rails3_assist
+  
+  ...
+end
+<pre>
+
+In the above example we also included the migration helper from the *rails3_assist* gem, which adds some migration CRUD functionality to the mix.
+
+### Class methods:
 
 * migrations_list(dirname=nil)*
 
@@ -26,7 +55,7 @@ Return the highest migration number of the current migration files
 
 Often used to generate the number to prefix a new generated migration file
 
-#### Instance methods
+### Instance methods
 
 *migration (name)*
 

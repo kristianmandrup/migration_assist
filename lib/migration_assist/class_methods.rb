@@ -2,7 +2,6 @@
 # Alternative to use this helper is to inherit from ActiveRecord::Generators::Base
 # which provides the #next_migration_number class method that lets #migration_template work as expected
 # 
-
 module Rails::Migration::Assist    
   def self.included(base) #:nodoc: 
     base.extend ClassMethods      

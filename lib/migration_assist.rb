@@ -7,5 +7,4 @@ module Rails
   end
 end
 
-require 'rails3_assist'
 require_all File.dirname(__FILE__) + '/migration_assist'

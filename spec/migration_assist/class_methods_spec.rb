@@ -5,6 +5,8 @@ class TestGenerator
   include Rails::Migration::Assist
 end
 
+Rails::Migration::Assist.orm = :active_record
+
 describe 'Migration Assist' do
   let(:dir) { fixtures_dir }  
   let(:generator) { TestGenerator.new }  
@@ -54,7 +56,8 @@ describe 'Migration Assist' do
   end
 
   describe '#next_migration_number' do    
-    it "should find next migration number 5" do               
+    it "should find next migration number > 4" do               
+      generator.class.next_migration_number(dir).to_i.should be > 4      
     end
   end
 end

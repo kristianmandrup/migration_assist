@@ -28,7 +28,7 @@ module Rails::Migration::Assist
     end
 
     def next_migration_number(dirname) #:nodoc:
-      orm = Rails.configuration.generators.options[:rails][:orm]
+      orm = Rails.configuration.generators.options[:rails][:orm] || Rails::Migration::Assist.orm
       require "rails/generators/#{orm}"
       "#{orm.to_s.camelize}::Generators::Base".constantize.next_migration_number(dirname)
     rescue

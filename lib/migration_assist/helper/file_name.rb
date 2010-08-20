@@ -1,6 +1,7 @@
 module Rails::Migration::Assist 
   class << self
     attr_accessor :rails_root_dir
+    attr_accessor :orm    
   end  
   
   module FileNameHelper         

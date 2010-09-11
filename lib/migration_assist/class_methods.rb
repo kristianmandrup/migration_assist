@@ -3,11 +3,17 @@
 # which provides the #next_migration_number class method that lets #migration_template work as expected
 # 
 module Rails::Migration::Assist    
+  class << self   
+    attr_accessor :rails_root_dir
+    attr_accessor :orm
+  end
+
   def self.included(base) #:nodoc: 
-    base.extend ClassMethods      
+    base.extend ClassMethods  
   end
 
   module ClassMethods    
+
     def migration_lookup_at(dirname) #:nodoc:
       Dir.glob("#{dirname}/[0-9]*_*.rb")
     end

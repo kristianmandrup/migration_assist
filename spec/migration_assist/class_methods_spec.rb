@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'rails'
 
 class TestGenerator
   include Rails::Migration::Assist

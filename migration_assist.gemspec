@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
      "lib/migration_assist/class_methods.rb",
      "lib/migration_assist/helper/file_name.rb",
      "lib/migration_assist/implementation.rb",
+     "lib/migration_assist/namespaces.rb",
      "migration_assist.gemspec",
      "spec/generators/migration_generator_spec.rb",
      "spec/load_spec.rb",

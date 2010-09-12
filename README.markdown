@@ -29,7 +29,7 @@ class MigrationGenerator < Rails::Generators::NamedBase
   
   ...
 end
-<pre>
+</pre>
 
 In the above example we also included the migration helper from the *rails3_assist* gem, which adds some migration CRUD functionality to the mix.
 

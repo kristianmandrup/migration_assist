@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 class TestGenerator
-  include Rails::Migration::Assist
+  include Rails3::Migration::Assist
 end
 
-Rails::Migration::Assist.orm = :active_record
+Rails3::Migration::Assist.orm = :active_record
 
 describe 'Migration Assist' do
   let(:dir) { fixtures_dir }  

@@ -1,8 +1,8 @@
-require 'rspec'
-require 'rspec/autorun' 
+require 'rspec/core'
 require 'migration_assist'
 
-RSpec.configure do |config|  
+RSpec.configure do |config|
+  config.mock_with :mocha  
 end
 
 def fixtures_dir

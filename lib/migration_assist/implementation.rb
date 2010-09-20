@@ -2,9 +2,8 @@ require 'rails/generators'
 require 'rails/generators/migration'
 require 'migration_assist/helper/file_name'
 
-module Rails::Migration::Assist
+module Rails3::Migration::Assist
   include Rails::Generators::Migration
-  # include Rails::Assist::Migration
   include FileNameHelper
     
   def reverse_migration_name name

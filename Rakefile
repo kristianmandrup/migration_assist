@@ -11,7 +11,7 @@ begin
     gem.add_development_dependency "mocha",  "~> 0.9.8"
     gem.add_development_dependency "rails",  "~> 3.0.0"
     
-    gem.add_dependency "require_all",   "~> 1.1.0"
+    gem.add_dependency "require_all",   "~> 1.2.0"
     gem.add_dependency "rails",         "~> 3.0.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

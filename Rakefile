@@ -7,7 +7,7 @@ begin
     gem.email = "kmandrup@gmail.com"
     gem.homepage = "http://github.com/kristianmandrup/migration_assist"
     gem.authors = ["Kristian Mandrup"]
-    gem.add_development_dependency "rspec",  "~> 2.0.0.beta.22"
+    gem.add_development_dependency "rspec",  ">= 2.0.0.rc"
     gem.add_development_dependency "mocha",  "~> 0.9.8"
     gem.add_development_dependency "rails",  "~> 3.0.0"
     

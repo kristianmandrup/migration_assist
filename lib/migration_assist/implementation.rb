@@ -33,6 +33,6 @@ module Rails3::Migration::Assist
   end
   
   def migration name, template_name=nil
-    migration_template "#{template_name || name}.erb", migration_file_name(name)
+    migration_template("#{template_name || name}.erb", migration_file_name(name))
   end  
 end

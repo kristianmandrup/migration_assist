@@ -12,6 +12,14 @@ module Rails3::Migration::Assist
     base.extend ClassMethods  
   end
 
+  def next_migration_number(dirname) #:nodoc:
+    orm = Rails3::Migration::Assist.orm || Rails.configuration.generators.options[:rails][:orm]
+    require "rails/generators/#{orm}"
+    "#{orm.to_s.camelize}::Generators::Base".constantize.next_migration_number(dirname)
+  rescue
+    raise NotImplementedError
+  end
+
   module ClassMethods    
 
     def migration_lookup_at(dirname) #:nodoc:

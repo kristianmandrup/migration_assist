@@ -14,5 +14,5 @@ class MigrationGenerator < Rails::Generators::NamedBase
   def create_migration     
     # info "Create migration: #{name} from template: 'create_users'" 
     migration name, 'create_users'
-  end
+  end  
 end 

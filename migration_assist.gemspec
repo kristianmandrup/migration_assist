@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{migration_assist}
-  s.version = "0.1.8"
+  s.version = "0.1.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
@@ -23,15 +23,12 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION",
-    "lib/generators/migration/migration_generator.rb",
-    "lib/generators/migration/templates/create_users.erb",
     "lib/migration_assist.rb",
     "lib/migration_assist/class_methods.rb",
     "lib/migration_assist/helper/file_name.rb",
     "lib/migration_assist/implementation.rb",
     "lib/migration_assist/namespaces.rb",
     "migration_assist.gemspec",
-    "spec/generators/migration_generator_spec.rb",
     "spec/load_spec.rb",
     "spec/migration_assist/class_methods_spec.rb",
     "spec/migration_assist/fixtures/001_migration_a.rb",
@@ -46,7 +43,6 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Assists in handling migrations}
   s.test_files = [
-    "spec/generators/migration_generator_spec.rb",
     "spec/load_spec.rb",
     "spec/migration_assist/class_methods_spec.rb",
     "spec/migration_assist/fixtures/001_migration_a.rb",

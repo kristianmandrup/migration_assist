@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 class TestGenerator
-  include Rails3::Migration::Assist
+  include RailsAssist::Migration
 end
 
-Rails3::Migration::Assist.orm = :active_record
+RailsAssist::Migration.orm = :active_record
 
-describe 'Migration Assist' do
+describe RailsAssist::Migration do
   let(:dir) { fixtures_dir }  
   let(:generator) { TestGenerator.new }  
 

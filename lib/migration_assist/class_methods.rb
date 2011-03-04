@@ -2,7 +2,7 @@
 # Alternative to use this helper is to inherit from ActiveRecord::Generators::Base
 # which provides the #next_migration_number class method that lets #migration_template work as expected
 # 
-module Rails3::Migration::Assist    
+module RailsAssist::Migration    
   class << self   
     attr_accessor :rails_root_dir
     attr_accessor :orm
@@ -13,7 +13,7 @@ module Rails3::Migration::Assist
   end
 
   def next_migration_number(dirname) #:nodoc:
-    orm = Rails3::Migration::Assist.orm || Rails.configuration.generators.options[:rails][:orm]
+    orm = RailsAssist::Migration.orm || Rails.configuration.generators.options[:rails][:orm]
     require "rails/generators/#{orm}"
     "#{orm.to_s.camelize}::Generators::Base".constantize.next_migration_number(dirname)
   rescue
@@ -42,7 +42,7 @@ module Rails3::Migration::Assist
     end
 
     def next_migration_number(dirname) #:nodoc:
-      orm = Rails3::Migration::Assist.orm || Rails.configuration.generators.options[:rails][:orm]
+      orm = RailsAssist::Migration.orm || Rails.configuration.generators.options[:rails][:orm]
       require "rails/generators/#{orm}"
       "#{orm.to_s.camelize}::Generators::Base".constantize.next_migration_number(dirname)
     rescue

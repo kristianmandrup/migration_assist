@@ -1,6 +1,4 @@
-module Rails3
+module RailsAssist
   module Migration
-    module Assist
-    end
   end
 end

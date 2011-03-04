@@ -10,7 +10,7 @@ RSpec::Generator.configure do |config|
 end
 
 
-Rails3::Migration::Assist.orm = :active_record
+RailsAssist::Migration.orm = :active_record
 
 require_generator :migration
 

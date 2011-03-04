@@ -13,7 +13,7 @@ First you have to tell the gem where your Rails root directory is located so it 
 
 Example:
 <pre>
-  Rails3::Migration::Assist.rails_root_dir = Rails.root
+  RailsAssist::Migration.rails_root_dir = Rails.root
 </pre>  
 
 A common use case for using this gem, is when you are creating code Generators that create Active Record migrations.
@@ -21,12 +21,10 @@ In this case you would add this Helper to your generator sth. like this
 
 <pre>
 require 'migration_assist'
-require 'rails3_assist'
+require 'rails_assist'
 
 class MigrationGenerator < Rails::Generators::NamedBase 
-  include Rails3::Migration::Assist  
-  include Rails3::Assist::Migration # from rails3_assist
-  
+  include RailsAssist::Migration    
   ...
 end
 </pre>

@@ -1,4 +1,4 @@
-module Rails3::Migration::Assist   
+module RailsAssist::Migration   
   module FileNameHelper         
     def artifact_path name, type, dir=nil
       dir ||= send :"#{type}_dir"
@@ -36,7 +36,7 @@ module Rails3::Migration::Assist
     end
 
     def root_dir                                                                                    
-      dir = Rails3::Migration::Assist.rails_root_dir || Rails.root
+      dir = RailsAssist::Migration.rails_root_dir || Rails.root
       raise "You must set the Rails app root dir: Rails3::Migration::Assist.rails_root_dir = '/my/root/dir'" if !dir
       dir
     end    

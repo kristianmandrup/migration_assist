@@ -2,7 +2,7 @@ require 'rails/generators'
 require 'rails/generators/migration'
 require 'migration_assist/helper/file_name'
 
-module Rails3::Migration::Assist
+module RailsAssist::Migration
   include Rails::Generators::Migration
   include FileNameHelper
     

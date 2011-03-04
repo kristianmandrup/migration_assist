@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{migration_assist}
-  s.version = "0.1.9"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = %q{2010-12-20}
+  s.date = %q{2011-03-04}
   s.description = %q{Assists in handling migrations, including generating migration files from a Thor Generator}
   s.email = %q{kmandrup@gmail.com}
   s.extra_rdoc_files = [
@@ -29,6 +29,9 @@ Gem::Specification.new do |s|
     "lib/migration_assist/implementation.rb",
     "lib/migration_assist/namespaces.rb",
     "migration_assist.gemspec",
+    "spec/TODO.textile",
+    "spec/generators/migration/migration_generator.rb",
+    "spec/generators/migration/templates/create_users.erb",
     "spec/load_spec.rb",
     "spec/migration_assist/class_methods_spec.rb",
     "spec/migration_assist/fixtures/001_migration_a.rb",
@@ -40,9 +43,10 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/kristianmandrup/migration_assist}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.6.1}
   s.summary = %q{Assists in handling migrations}
   s.test_files = [
+    "spec/generators/migration/migration_generator.rb",
     "spec/load_spec.rb",
     "spec/migration_assist/class_methods_spec.rb",
     "spec/migration_assist/fixtures/001_migration_a.rb",
@@ -54,26 +58,25 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 2.0.1"])
+      s.add_development_dependency(%q<rspec>, [">= 2.4.1"])
       s.add_development_dependency(%q<mocha>, [">= 0.9.8"])
-      s.add_development_dependency(%q<generator-spec>, [">= 0.7.1"])
+      s.add_development_dependency(%q<generator-spec>, [">= 0.7.3"])
       s.add_runtime_dependency(%q<require_all>, ["~> 1.2.0"])
       s.add_runtime_dependency(%q<rails>, [">= 3.0.1"])
     else
-      s.add_dependency(%q<rspec>, [">= 2.0.1"])
+      s.add_dependency(%q<rspec>, [">= 2.4.1"])
       s.add_dependency(%q<mocha>, [">= 0.9.8"])
-      s.add_dependency(%q<generator-spec>, [">= 0.7.1"])
+      s.add_dependency(%q<generator-spec>, [">= 0.7.3"])
       s.add_dependency(%q<require_all>, ["~> 1.2.0"])
       s.add_dependency(%q<rails>, [">= 3.0.1"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 2.0.1"])
+    s.add_dependency(%q<rspec>, [">= 2.4.1"])
     s.add_dependency(%q<mocha>, [">= 0.9.8"])
-    s.add_dependency(%q<generator-spec>, [">= 0.7.1"])
+    s.add_dependency(%q<generator-spec>, [">= 0.7.3"])
     s.add_dependency(%q<require_all>, ["~> 1.2.0"])
     s.add_dependency(%q<rails>, [">= 3.0.1"])
   end

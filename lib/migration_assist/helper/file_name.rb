@@ -1,3 +1,6 @@
+require 'rails_assist'
+require 'migration_assist/helper/migration'
+
 module RailsAssist::Migration   
   module FileNameHelper         
     def artifact_path name, type, dir=nil

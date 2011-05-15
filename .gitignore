@@ -13,6 +13,8 @@ tmtags
 ## VIM
 *.swp
 
+*.log
+
 ## PROJECT::GENERAL
 coverage
 rdoc

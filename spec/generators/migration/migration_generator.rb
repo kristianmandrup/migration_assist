@@ -1,9 +1,9 @@
 require 'rails/generators'
 require 'rails/generators/migration'
-require 'rails3_assist'
+require 'rails_assist'
 
 class MigrationGenerator < Rails::Generators::NamedBase 
-  include Rails3::Migration::Assist
+  include RailsAssist::Migration
 
   desc "Creates a migration"
 

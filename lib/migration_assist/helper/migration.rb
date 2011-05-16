@@ -1,11 +1,12 @@
 require 'sugar-high/regexp'
+require 'rails_artifactor'
 
 module RailsAssist::Artifact
   module Migration
     module FileName 
-      include ::RailsAssist::Migration::ClassMethods
-
-      DIR = RailsAssist::Artifact::Directory
+      include RailsAssist::BaseHelper    
+      include RailsAssist::Migration::ClassMethods
+      include RailsAssist::Artifact::FileName
 
       class FindError
         attr_accessor :find_expr
@@ -18,7 +19,7 @@ module RailsAssist::Artifact
       def migration_file_name name, options={}
         number = options[:number]              
       
-        migration_dir_name = File.expand_path(DIR.migration_dir(options))
+        migration_dir_name = File.expand_path(RailsAssist::Artifact::Directory.migration_dirpath(options))
               
         number = next_migration_number(migration_dir_name) if !number      
         File.join(migration_dir_name, "#{number}_#{name}.rb")      
@@ -27,7 +28,7 @@ module RailsAssist::Artifact
       def find_migration name, options={}
         root_path = options[:root_path]        
            
-        migration_dir_name = File.expand_path(DIR.migration_dir options)
+        migration_dir_name = File.expand_path(RailsAssist::Artifact::Directory.migration_dirpath options)
 
         migration_find_expr = "#{migration_dir_name}/[0-9]*_*.rb"
         migrations = Dir.glob(migration_find_expr)
@@ -49,5 +50,9 @@ module RailsAssist::Artifact
 
     include FileName 
     extend FileName     
-  end
-end
+  end 
+  
+  rails_root_dir = RailsAssist::Directory.rails_root
+end          
+
+

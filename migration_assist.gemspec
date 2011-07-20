@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE",
     "README.markdown",
     "Rakefile",
@@ -57,6 +58,9 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<sugar-high>, ["~> 0.5.0"])
       s.add_runtime_dependency(%q<rails_assist>, ["~> 0.5.0"])
       s.add_runtime_dependency(%q<rails_artifactor>, ["~> 0.4.0"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0.10"])
+      s.add_development_dependency(%q<rcov>, [">= 0.9"])
       s.add_development_dependency(%q<rspec>, [">= 2.4.1"])
       s.add_development_dependency(%q<mocha>, [">= 0.9.8"])
       s.add_development_dependency(%q<generator-spec>, ["~> 0.7.5"])
@@ -66,6 +70,9 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<sugar-high>, ["~> 0.5.0"])
       s.add_dependency(%q<rails_assist>, ["~> 0.5.0"])
       s.add_dependency(%q<rails_artifactor>, ["~> 0.4.0"])
+      s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
+      s.add_dependency(%q<bundler>, ["~> 1.0.10"])
+      s.add_dependency(%q<rcov>, [">= 0.9"])
       s.add_dependency(%q<rspec>, [">= 2.4.1"])
       s.add_dependency(%q<mocha>, [">= 0.9.8"])
       s.add_dependency(%q<generator-spec>, ["~> 0.7.5"])
@@ -76,6 +83,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<sugar-high>, ["~> 0.5.0"])
     s.add_dependency(%q<rails_assist>, ["~> 0.5.0"])
     s.add_dependency(%q<rails_artifactor>, ["~> 0.4.0"])
+    s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
+    s.add_dependency(%q<bundler>, ["~> 1.0.10"])
+    s.add_dependency(%q<rcov>, [">= 0.9"])
     s.add_dependency(%q<rspec>, [">= 2.4.1"])
     s.add_dependency(%q<mocha>, [">= 0.9.8"])
     s.add_dependency(%q<generator-spec>, ["~> 0.7.5"])
